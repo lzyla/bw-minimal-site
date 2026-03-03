@@ -1,0 +1,163 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: #000;
+  background-color: #fff;
+}
+
+a {
+  color: #000;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Header and Navigation */
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.site-title a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 24px;
+  font-size: 0.9rem;
+  text-transform: none;
+}
+
+.nav li {
+  margin: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav a:hover,
+.nav a.active {
+  text-decoration: underline;
+}
+
+/* Horizontal rule */
+.rule {
+  border: none;
+  border-top: 1px solid #000;
+  margin: 0;
+}
+
+/* Main content */
+main article {
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+
+main h1 {
+  font-size: 2.2rem;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+main h2 {
+  font-size: 1.4rem;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+main p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+/* Lists with lines */
+ul.plain-list,
+ol.plain-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.plain-list li,
+ol.plain-list li {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #000;
+}
+
+ul.plain-list li:last-child,
+ol.plain-list li:last-child {
+  border-bottom: none;
+}
+
+/* Timeline styling */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline li {
+  display: flex;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #000;
+}
+
+.timeline li:last-child {
+  border-bottom: none;
+}
+
+.timeline .year {
+  width: 80px;
+  font-weight: 600;
+}
+
+.timeline .desc {
+  flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .timeline .year {
+    width: 60px;
+  }
+}
