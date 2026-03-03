@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <link rel="stylesheet" href="{{ "/css/styles.css" | relURL }}" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-inner">
+        <h1 class="site-title"><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
+        <nav>
+          <ul class="nav">
+            {{ range .Site.Menus.main }}
+              <li><a href="{{ .URL }}" {{ if $.IsMenuCurrent "main" . }}class="active"{{ end }}>{{ .Name }}</a></li>
+            {{ end }}
+          </ul>
+        </nav>
+      </div>
+      <hr class="rule" />
+    </header>
+
+    <main class="container">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer>
+      <hr class="rule" />
+      <div class="container footer-inner">
+        <p>&copy; 2026 Jan Kowalski — “Work, quietly.”</p>
+      </div>
+    </footer>
+  </body>
+</html>
